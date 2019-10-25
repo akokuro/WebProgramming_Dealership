@@ -1,1 +1,19 @@
-<p>admin works!</p>
+<div class="container" style="height: 100%">                            
+    <div class="py-5 text-center"> 
+        <h2>Добавление модели машин</h2>
+        <div class="form-group">
+            <div class="form-label">
+                <label>Название модели</label>
+                <input class="form-control" name="title" [(ngModel)]="title" />
+            </div>
+            <br>
+            <div class="form-label">
+                <label>Цена</label>
+                <input type="number" class="form-control" name="price" [(ngModel)]="price" />
+            </div>
+            <br>
+            <button class="btn btn-primary btn-lg btn-block" (click)="post_form_data(CarModel)">Добавить модель машины</button>
+        </div>
+    </div>
+</div>    
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">

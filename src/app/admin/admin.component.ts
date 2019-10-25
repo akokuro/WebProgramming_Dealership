@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CarModel} from './../Classes/CarModel'
+import {HttpService} from './../http.service'
 
 @Component({
   selector: 'app-admin',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpService: HttpService){}
+
+  receivedData: CarModel;
+  done: boolean = false;
 
   ngOnInit() {
   }
-
+  submit(data: CarModel){
+        this.httpService.CarModelAdd(data)
+                .subscribe(
+                    (data: CarModel) => {this.receivedData=data; this.done=true;},
+                    error => console.log(error)
+                );
+    }
 }
