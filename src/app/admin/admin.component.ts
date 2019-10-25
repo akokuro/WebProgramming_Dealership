@@ -5,7 +5,8 @@ import {HttpService} from './../http.service'
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.less']
+  styleUrls: ['./admin.component.less'],
+  providers: [HttpService]
 })
 export class AdminComponent implements OnInit {
 
