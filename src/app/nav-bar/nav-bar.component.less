@@ -1,25 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 /* цвет фона и рамки навигационного меню */
 .navbar-default {
-    background-color: rgba(248, 248, 248, 0.171);
-    border-color: #E7E7E7;
+    background-color: rgb(0, 0, 0);
+    border-color: rgb(0, 0, 0);
+    size: 26px;
 /* цвет текста, содержащий название сайта или бренда */
 
     &  .navbar-brand {
-        background-color: rgb(83, 92, 145);
-        color: rgb(0, 0, 0);
+        border: left;
     }
     & .navbar-nav{
         display:table;
         width:100%;
         & ul{
             display:table-row;
-		    float:none;
+            float:none;
         }
         & li{
             display:table-cell;
+            font-family: 'Segoe UI'; 
 		    float:none;
-		    text-align:center;
-            color: rgb(0, 0, 0); 
+            text-align:justify;
+            text-align-last: center;
+            color: rgb(255, 255, 255); 
+            font-size: 26px;
             list-style: none;
             float:none;
         }
