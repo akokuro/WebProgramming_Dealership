@@ -14,14 +14,15 @@ export class AdminComponent implements OnInit {
 
   receivedData: CarModel;
   done: boolean = false;
-
+  carModel: CarModel;
   ngOnInit() {
   }
-  submit(data: CarModel){
-        this.httpService.CarModelAdd(data)
-                .subscribe(
-                    (data: CarModel) => {this.receivedData=data; this.done=true;},
-                    error => console.log(error)
-                );
-    }
+  submit(title: string, price: number){
+    this.carModel = new CarModel(title, price)
+    this.httpService.CarModelAdd(this.carModel)
+            .subscribe(
+                (data: CarModel) => {this.receivedData=data; this.done=true;},
+                error => console.log(error)
+            );
+  }
 }
