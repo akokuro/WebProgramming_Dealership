@@ -1,1 +1,24 @@
-<p>models works!</p>
+<table class="table">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Название
+        </th>
+        <th>
+            Цена
+        </th>
+    </tr>
+    <tr *ngFor="let car of cars">
+        <td>
+            {{car[0]}}
+        </td>
+        <td>
+            {{car[1]}}
+        </td>
+        <td>
+            {{car[2]}}
+        </td>
+    </tr>
+</table>

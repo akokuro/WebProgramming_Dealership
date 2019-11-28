@@ -10,6 +10,8 @@ import { StartPageComponent } from './start-page/start-page.component';
 import { ModelsComponent } from './models/models.component';
 import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 const appRoutes: Routes = [
   {
@@ -20,6 +22,12 @@ const appRoutes: Routes = [
   },
   {
     path: 'admin', component: AdminComponent
+  },
+  {
+    path: 'register', component: RegisterComponent
+  },
+  {
+    path: 'login', component: LoginComponent
   },
   {
     path: '', redirectTo: '/start', pathMatch: 'full' 
@@ -33,7 +41,9 @@ const appRoutes: Routes = [
     NavBarComponent,
     StartPageComponent,
     ModelsComponent,
-    AdminComponent
+    AdminComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     HttpClientModule,

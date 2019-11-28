@@ -14,10 +14,10 @@
             <br>
         </form>
         <button class="btn btn-primary btn-lg" (click)="add(title, price)">Добавить</button>
-        <button class="btn btn-primary btn-lg" (click)="update(title, price)">Изменить</button>
+
         <button class="btn btn-primary btn-lg" (click)="remove(title, price)">Удалить</button>
         <button class="btn btn-primary btn-lg" (click)="get_list()">Обновить</button>
-        <table>
+        <table class="table">
             <tr>
                 <td>
                     ID
@@ -31,7 +31,7 @@
             </tr>
             <tr *ngFor="let car of cars">
                 <td>
-                    {{car[0]}}
+                    {{car[0]}} 
                 </td>
                 <td>
                     {{car[1]}}
@@ -39,6 +39,7 @@
                 <td>
                     {{car[2]}}
                 </td>
+                <button class="btn btn-primary btn-lg" (click)="update(title, price)">Изменить</button>
             </tr>
         </table>
     </div>

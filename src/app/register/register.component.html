@@ -1,0 +1,21 @@
+<div id="login-box">
+    <div class="left">
+      <h1>Регистрация</h1>
+      
+      <input type="text" name="username" placeholder="Имя пользователя" [(ngModel)]="name"/>
+      <input type="text" name="email" placeholder="E-mail" [(ngModel)]="email"/>
+      <input type="password" name="password" placeholder="Пароль" [(ngModel)]="password"/>
+      <input type="password" name="password2" placeholder="Повторите пароль" [(ngModel)]="password2"/>
+      <div id="warning" class="warning">Поля заполнены не корректно</div>
+      <input type="submit" name="signup_submit" (click)="register(name, email, password, password2)" value="Регистрация" />
+    </div>
+    
+    <div class="right">
+      <span class="loginwith">Войти с помощью социальной сети</span>
+      
+      <button class="social-signin facebook">Log in with facebook</button>
+      <button class="social-signin twitter">Log in with Twitter</button>
+      <button class="social-signin google">Log in with Google+</button>
+    </div>
+    <div class="or">Или</div>
+  </div>
