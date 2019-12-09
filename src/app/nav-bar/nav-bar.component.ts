@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient} from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
+import { User } from '../Classes/user_info';
 
 @Component({
   selector: 'app-nav-bar',
@@ -18,6 +19,8 @@ export class NavBarComponent implements OnInit {
         }).subscribe(
           (data:string) => {
             this.SEE(data, true);
+            User.Info.Name = data.split(' ')[0];
+            User.Info.Role = data.split(' ')[1];
           }, 
           (error: any) => {
             this.SEE("", false);
@@ -30,11 +33,9 @@ export class NavBarComponent implements OnInit {
 
   SEE(name:string, visible:boolean) {
     if(visible){
-      // setTimeout(()=>this.SEE(false), 1000);
       document.getElementById("UserInfo").innerText = name;
       document.getElementById("UserInfo").style.visibility = "visible";
     } else{
-      // setTimeout(()=>this.SEE(true), 1000);
       document.getElementById("UserInfo").style.visibility = "hidden";
     }
   }

@@ -12,6 +12,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { AdminGuard }   from './guard';
 
 const appRoutes: Routes = [
   {
@@ -21,7 +22,7 @@ const appRoutes: Routes = [
     path: 'start', component: StartPageComponent
   },
   {
-    path: 'admin', component: AdminComponent
+    path: 'admin', component: AdminComponent, canActivate: [AdminGuard]
   },
   {
     path: 'register', component: RegisterComponent
@@ -55,7 +56,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [HttpService],
+  providers: [HttpService,AdminGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
