@@ -3,6 +3,10 @@
     margin: 0;
 }
 /* цвет фона и рамки навигационного меню */
+.navbar-left {
+    display: inline-block;
+}
+
 .navbar-default {
     background-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
@@ -21,15 +25,18 @@
         }
         & li{
             display:table-cell;
-            font-family: 'Segoe UI'; 
+            font-family: 'Segoe UI';
 		    float:none;
             text-align:justify;
             text-align-last: center;
-            color: rgb(255, 255, 255); 
+            color: rgb(255, 255, 255);
             font-size: 26px;
             list-style: none;
             float:none;
         }
+    }
+    &  .navbar-user {
+        color: #CCC;
     }
 }
 /* цвет текста (название сайта или бренда), при поднесении к нему курсора мышки или при его нахождении в фокусе */
@@ -47,15 +54,15 @@
     color: #333;
 }
 /* Цвет и фон активного пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
-.navbar-default .navbar-nav > .active > a, 
-.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
     color: #555;
     background-color: #E7E7E7;
 }
 /* Цвет и фон открытого пункта меню, а также поднесении к нему курсора мышки или при его нахождении в фокусе */
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
     color: #555;
     background-color: #D5D5D5;
@@ -72,8 +79,8 @@
     border-bottom-color: #333;
 }
 /* Цвет стрелочки (треугольничка), открывшегося пункта меню */
-.navbar-default .navbar-nav > .open > a .caret, 
-.navbar-default .navbar-nav > .open > a:hover .caret, 
+.navbar-default .navbar-nav > .open > a .caret,
+.navbar-default .navbar-nav > .open > a:hover .caret,
 .navbar-default .navbar-nav > .open > a:focus .caret {
     border-top-color: #555;
     border-bottom-color: #555;
@@ -92,7 +99,7 @@
 .navbar-default .navbar-toggle .icon-bar {
     background-color: #CCC;
 }
- 
+
 @media (max-width: 767px) {
 /* Цвет пунктов меню в раскрывающихся списках */
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -109,7 +116,7 @@
   form {
     border: 3px solid #f1f1f1;
   }
-  
+
   /* Full-width inputs */
   input[type=text], input[type=password] {
     width: 100%;
@@ -119,7 +126,7 @@
     border: 1px solid #ccc;
     box-sizing: border-box;
   }
-  
+
   /* Set a style for all buttons */
   button {
     background-color: #4CAF50;
@@ -130,25 +137,25 @@
     cursor: pointer;
     width: 100%;
   }
-  
+
   /* Add a hover effect for buttons */
   button:hover {
     opacity: 0.8;
   }
-  
+
   /* Extra style for the cancel button (red) */
   .cancelbtn {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
   }
-  
+
   /* Center the avatar image inside this container */
   .imgcontainer {
     text-align: center;
     margin: 24px 0 12px 0;
   }
-  
+
 
   .modalDialog {
     margin:20px;
@@ -162,4 +169,10 @@
     background: rgba(0,0,0,0.8);
     z-index: 99999;
     display: none;
+  }
+  
+  .user_info {
+    display: inline-block;
+    visibility: hidden;
+    float: right;
 }

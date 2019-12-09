@@ -1,0 +1,1 @@
+ng serve --host dev.localhost --open

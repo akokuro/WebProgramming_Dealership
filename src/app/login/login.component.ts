@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   show_warning(message:string){
     document.getElementById("warning").innerText = message;
     document.getElementById("warning").style.visibility = "visible";
-    setTimeout(()=>document.getElementById("warning").style.visibility = "hidden", 5000);
+    // setTimeout(()=>document.getElementById("warning").style.visibility = "hidden", 5000);
   }
 
   login(email:string, password:string){
@@ -28,13 +28,22 @@ export class LoginComponent implements OnInit {
       this.http.post('http://dev.localhost:5000/login/', body, {
         withCredentials: true
       }).subscribe((data:string)=>{
+        console.log("--------------")
         if(data == 'ok'){
+          console.log("--------------")
           this.router.navigate(['start']);
+          console.log("--------------")
+          console.log(this.getCookie("token"))
         }
         this.show_warning(data);
         console.log(data);
       });
       console.log("отправлено");
     }
+  }
+  getCookie(name: string) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
   }
 }
