@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminGuard }   from './guard';
+import { FileManagerComponent } from './file-manager/file-manager.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,9 @@ const appRoutes: Routes = [
     path: 'login', component: LoginComponent
   },
   {
+    path: 'file', component: FileManagerComponent
+  },
+  {
     path: '', redirectTo: '/start', pathMatch: 'full' 
   }
 ];
@@ -44,7 +48,8 @@ const appRoutes: Routes = [
     ModelsComponent,
     AdminComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    FileManagerComponent
   ],
   imports: [
     HttpClientModule,
