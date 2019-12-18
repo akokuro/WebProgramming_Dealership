@@ -25,4 +25,13 @@ export class ModelsComponent implements OnInit {
     });
     console.log(this.cars);
   }
+  filterCar(filter : string){
+    this.http.get('http://localhost:5000/get_cars/' + filter).subscribe((response: any) => {
+      console.log("response", response);
+      this.cars = [];
+      response.forEach(element => {
+        this.cars.push(element);
+      });
+    });
+  }
 }

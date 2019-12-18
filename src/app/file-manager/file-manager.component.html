@@ -1,3 +1,7 @@
 <form>
     <input type="file" (change)="fileChange($event)" name="file">
 </form>
+
+<div *ngFor="let file of files">
+    <a href={{file[0]}}>{{file[1]}}</a>
+</div>

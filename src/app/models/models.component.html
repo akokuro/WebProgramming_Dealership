@@ -1,3 +1,7 @@
+<form>
+    <input type="text" name=filter placeholder="Искать здесь..." [(ngModel)]="filter">
+    <button type="submit" (click)="filterCar(filter)" ></button>
+  </form>
 <table class="table">
     <tr>
         <th>

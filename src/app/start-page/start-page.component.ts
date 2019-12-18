@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
 
  @Component({
   selector: 'app-start-page',
@@ -12,4 +13,8 @@ export class StartPageComponent implements OnInit {
    ngOnInit() {
   }
 
+  logout(){
+    Cookie.delete('token');
+    location.reload();
+  }
  }
